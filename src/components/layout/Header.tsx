@@ -67,6 +67,7 @@ export default function Header({ isDarkMode, setIsDarkMode, isMenuOpen, setIsMen
               className={`transition-colors ${
                 isDarkMode ? "bg-white text-black hover:bg-gray-200" : "bg-black text-white hover:bg-gray-800"
               }`}
+              onClick={scrollToCalendar}
             >
               Book Strategy Call
             </Button>
