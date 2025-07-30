@@ -9,6 +9,12 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ isDarkMode, scrollY }: HeroSectionProps) {
+  const scrollToCalendar = () => {
+    const calendarSection = document.getElementById("calendar")
+    if (calendarSection) {
+      calendarSection.scrollIntoView({ behavior: "smooth" })
+    }
+  }
   return (
     <section className={`relative pt-32 pb-20 px-6 lg:px-8 overflow-hidden ${isDarkMode ? "bg-black" : "bg-white"}`}>
       <div className="max-w-7xl mx-auto text-center">
@@ -58,12 +64,11 @@ export default function HeroSection({ isDarkMode, scrollY }: HeroSectionProps) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               size="lg"
-              className={`text-lg px-8 py-4 transition-colors ${
-                isDarkMode ? "bg-white text-black hover:bg-gray-200" : "bg-black text-white hover:bg-gray-800"
-              }`}
+              variant={isDarkMode ? "outline" : "default"}
+              className={isDarkMode ? "text-white hover:text-black" : ""}
+              onClick={scrollToCalendar}
             >
               Book a Free Strategy Call
-              <ChevronRight className="ml-2" size={20} />
             </Button>
             <Button
               variant="outline"

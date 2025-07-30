@@ -9,6 +9,7 @@ import PackagesSection from "./sections/PackagesSection"
 import WhyZStudiosSection from "./sections/WhyZStudiosSection"
 import TestimonialsSection from "./sections/TestimonialsSection"
 import CTASection from "./sections/CTASection"
+import CalendarSection from "./sections/CalendarSection"
 
 export default function ZStudiosLanding() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -37,6 +38,7 @@ export default function ZStudiosLanding() {
       <WhyZStudiosSection isDarkMode={isDarkMode} />
       <TestimonialsSection isDarkMode={isDarkMode} />
       <CTASection isDarkMode={isDarkMode} />
+      <CalendarSection isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />
     </div>
   )

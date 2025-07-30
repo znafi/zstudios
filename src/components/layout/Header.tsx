@@ -11,6 +11,13 @@ interface HeaderProps {
 }
 
 export default function Header({ isDarkMode, setIsDarkMode, isMenuOpen, setIsMenuOpen }: HeaderProps) {
+  const scrollToCalendar = () => {
+    const calendarSection = document.getElementById("calendar")
+    if (calendarSection) {
+      calendarSection.scrollIntoView({ behavior: "smooth" })
+      setIsMenuOpen(false) // Close mobile menu after clicking
+    }
+  }
   return (
     <nav
       className={`fixed top-0 w-full z-50 backdrop-blur-md border-b transition-colors duration-300 ${
@@ -98,7 +105,10 @@ export default function Header({ isDarkMode, setIsDarkMode, isMenuOpen, setIsMen
               {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
               <span>{isDarkMode ? "Light Mode" : "Dark Mode"}</span>
             </button>
-            <Button className={`w-full ${isDarkMode ? "bg-white text-black" : "bg-black text-white"}`}>
+            <Button 
+              className={`w-full ${isDarkMode ? "bg-white text-black" : "bg-black text-white"}`}
+              onClick={scrollToCalendar}
+            >
               Book Strategy Call
             </Button>
           </div>
