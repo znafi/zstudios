@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   description: "We combine content, paid ads, AI automation, and design to scale your brand faster.",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "32x32" },
-      { url: "/favicon.svg", type: "image/svg+xml" }
+      { url: "./favicon.ico", sizes: "32x32" },
+      { url: "./favicon.svg", type: "image/svg+xml" }
     ]
   }
 }
