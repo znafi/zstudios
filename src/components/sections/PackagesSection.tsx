@@ -54,14 +54,13 @@ export default function PackagesSection({ isDarkMode }: PackagesSectionProps) {
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className={`group p-8 rounded-2xl transition-all duration-500 hover:-translate-y-2 ${
-                pkg.featured
+              className={`group p-8 rounded-2xl transition-all duration-500 ${pkg.featured
                   ? isDarkMode
-                    ? "bg-white text-black shadow-2xl scale-105"
-                    : "bg-black text-white shadow-2xl scale-105"
+                    ? "bg-white text-black shadow-2xl scale-105 hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] hover:border-2 hover:border-white"
+                    : "bg-black text-white shadow-2xl scale-105 hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] hover:border-2 hover:border-white"
                   : isDarkMode
-                    ? "bg-gray-900 border border-gray-700 hover:shadow-xl text-white"
-                    : "bg-white border border-gray-200 hover:shadow-xl"
+                    ? "bg-gray-900 border border-gray-700 text-white hover:shadow-[0_0_25px_rgba(255,255,255,0.3)] hover:border-2 hover:border-white"
+                    : "bg-white border border-gray-200 hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] hover:border-2 hover:border-white hover:bg-black hover:text-white"
               }`}
             >
               <div className="mb-8">

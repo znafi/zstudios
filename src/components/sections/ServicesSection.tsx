@@ -72,7 +72,7 @@ export default function ServicesSection({ isDarkMode }: ServicesSectionProps) {
           {services.map((service, index) => (
             <div
               key={`${service.title}-${index}`}
-              className="group p-8 rounded-2xl hover:shadow-xl transition-all duration-200 hover:-translate-y-2 relative overflow-hidden"
+              className="group p-8 rounded-2xl relative overflow-hidden"
               style={{
                 backgroundColor: isDarkMode ? "#111111" : "#FFFFFF",
                 color: "#161616",
@@ -81,7 +81,7 @@ export default function ServicesSection({ isDarkMode }: ServicesSectionProps) {
             >
               {/* Video Background */}
               <video
-                className="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:opacity-0 transition-opacity duration-300 rounded-2xl"
+                className="absolute inset-0 w-full h-full object-cover opacity-100 rounded-2xl"
                 autoPlay
                 loop
                 muted
@@ -99,10 +99,10 @@ export default function ServicesSection({ isDarkMode }: ServicesSectionProps) {
               </video>
 
               {/* Dark overlay */}
-              <div className="absolute inset-0 bg-black/60 group-hover:opacity-0 transition-opacity duration-300 rounded-2xl" />
+              <div className="absolute inset-0 bg-black/60 rounded-2xl" />
 
               {/* Default Content */}
-              <div className="relative z-10 transition-opacity duration-200">
+              <div className="relative z-10">
                 <div className="mb-6">
                   <service.icon
                     size={48}
@@ -130,34 +130,7 @@ export default function ServicesSection({ isDarkMode }: ServicesSectionProps) {
                 </p>
               </div>
 
-              {/* Hover Content */}
-              <div
-                className="absolute inset-0 p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-center items-center z-20"
-                style={{ backgroundColor: "#111111" }}
-              >
-                <div className="mb-6">
-                  <service.icon size={64} className="text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-center text-white">{service.title}</h3>
-                <p className="leading-relaxed text-center text-sm text-white opacity-80">{service.description}</p>
 
-                {/* Special content for Paid Social Ads */}
-                {service.title === "Paid Social Ads" && (
-                  <div className="flex space-x-4 mt-4">
-                    <div className="w-8 h-8 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 rounded-lg flex items-center justify-center">
-                      <div className="w-5 h-5 border border-white rounded-sm relative">
-                        <div className="w-1 h-1 bg-white rounded-full absolute top-0.5 right-0.5"></div>
-                      </div>
-                    </div>
-                    <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                      <div className="text-white font-bold text-sm">f</div>
-                    </div>
-                    <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
-                      <div className="text-white font-bold text-xs">♪</div>
-                    </div>
-                  </div>
-                )}
-              </div>
             </div>
           ))}
         </div>
