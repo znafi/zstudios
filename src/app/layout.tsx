@@ -3,7 +3,7 @@ import "./globals.css"
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://zstudios.digital'),
-  title: "ZStudios - Growth Systems for Scaling Brands",
+  title: "ZStudios",
   description: "We combine content, paid ads, AI automation, and design to scale your brand faster.",
   icons: [
     { rel: "apple-touch-icon", url: "/apple-touch-icon.png", sizes: "180x180" },
