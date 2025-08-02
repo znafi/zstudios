@@ -32,7 +32,7 @@ export default function CTASection({ isDarkMode }: CTASectionProps) {
           <Button
             size="lg"
             variant={isDarkMode ? "outline" : "default"}
-            className={isDarkMode ? "text-white hover:text-black" : ""}
+            className={isDarkMode ? "text-white hover:text-white hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]" : "hover:text-white hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]"}
             onClick={scrollToCalendar}
           >
             Book a Free Strategy Call
