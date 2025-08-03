@@ -77,9 +77,13 @@ export default function PackagesSection({ isDarkMode }: PackagesSectionProps) {
   ]
 
   return (
-    <section id="packages" className={`py-20 px-6 lg:px-8 ${isDarkMode ? "bg-black" : "bg-white"}`}>
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+    <section id="packages" className="py-20 px-6 lg:px-8 bg-black">
+      <div className="max-w-7xl mx-auto relative">
+        {/* Purple glow effects */}
+        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full filter blur-3xl -translate-y-1/2 -translate-x-1/2" />
+        <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-purple-800/20 rounded-full filter blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-700/20 rounded-full filter blur-3xl -translate-y-1/2 -translate-x-1/2" />
+        <div className="text-center mb-16 relative z-10">
           <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${isDarkMode ? "text-white" : "text-black"}`}>
             Choose Your Growth Path
           </h2>
@@ -92,13 +96,13 @@ export default function PackagesSection({ isDarkMode }: PackagesSectionProps) {
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className={`group p-8 rounded-2xl transition-all duration-500 h-full backdrop-blur-lg bg-gradient-to-br from-purple-900/30 via-purple-800/20 to-purple-900/30 border border-purple-500/30 shadow-[0_8px_32px_0_rgba(147,51,234,0.1)] hover:shadow-[0_8px_32px_0_rgba(147,51,234,0.3)] ${isDarkMode ? "text-white" : "text-black"}`}
+              className="group p-8 rounded-[32px] transition-all duration-500 h-full backdrop-blur-lg bg-gradient-to-br from-purple-900/40 via-purple-800/30 to-purple-900/40 border border-purple-500/20 shadow-[0_8px_32px_0_rgba(147,51,234,0.15)] hover:shadow-[0_8px_32px_0_rgba(147,51,234,0.4)] overflow-hidden relative text-white"
             >
               <div className="h-full flex flex-col">
                 <div className="mb-8">
-                  <h3 className="text-3xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">{pkg.name}</h3>
+                  <h3 className="text-3xl font-extrabold mb-4 text-white">{pkg.name}</h3>
                   {pkg.subtitle && (
-                    <p className="text-xl font-semibold mb-6 text-purple-300">
+                    <p className="text-lg font-medium mb-6 text-purple-200/90">
                       {pkg.subtitle}
                     </p>
                   )}
@@ -107,14 +111,14 @@ export default function PackagesSection({ isDarkMode }: PackagesSectionProps) {
                 <div className="flex-grow">
                   {pkg.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="space-y-4 mb-6">
-                      <h4 className="text-xl font-bold text-purple-200 mb-3">
+                      <h4 className="text-lg font-bold text-purple-100 mb-3">
                         {service.title}
                       </h4>
                       <ul className="space-y-2">
                         {service.items.map((item, itemIndex) => (
                           <li
                             key={itemIndex}
-                            className="flex items-start text-lg font-medium text-purple-100"
+                            className="flex items-start text-base font-medium text-purple-200/80"
                           >
                             <span className="mr-2">✓</span>
                             <span>{item}</span>
