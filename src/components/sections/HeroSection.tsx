@@ -27,38 +27,23 @@ export default function HeroSection({ isDarkMode, scrollY }: HeroSectionProps) {
           }}
         >
           <h1
-            className={`text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none mb-8 ${
-              isDarkMode ? "text-white" : "text-black"
-            }`}
+            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-6 ${isDarkMode ? "text-white" : "text-black"}`}
             style={{
-              textShadow: isDarkMode
-                ? "0 0 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.1)"
-                : "none",
+              textShadow: isDarkMode ? "0 0 15px rgba(255, 255, 255, 0.2)" : "none",
             }}
           >
-            Done-for-You
+            You Bring the Vision.
             <br />
-            <span
-              className={isDarkMode ? "text-gray-400" : "text-gray-600"}
-              style={{
-                textShadow: isDarkMode ? "0 0 20px rgba(156, 163, 175, 0.4)" : "none",
-              }}
-            >
-              Growth Systems
-            </span>
-            <br />
-            for Scaling Brands
+            We Bring the System
           </h1>
 
           <p
-            className={`text-xl md:text-2xl max-w-4xl mx-auto mb-12 leading-relaxed ${
-              isDarkMode ? "text-gray-300" : "text-gray-600"
-            }`}
+            className={`text-xl md:text-2xl max-w-4xl mx-auto mb-12 leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
             style={{
               textShadow: isDarkMode ? "0 0 15px rgba(209, 213, 219, 0.2)" : "none",
             }}
           >
-            We combine content, paid ads, AI automation, and design to scale your brand faster.
+            Less Buzzwords. More Bottom Line
           </p>
 
           <div className="flex justify-center items-center">
