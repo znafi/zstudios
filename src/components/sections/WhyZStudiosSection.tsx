@@ -42,8 +42,8 @@ export default function WhyZStudiosSection({ isDarkMode }: WhyZStudiosSectionPro
                 <div className={`${isDarkMode ? "text-gray-400" : "text-gray-400"}`}>ROAS</div>
               </div>
               <div className="text-center">
-                <div className={`text-4xl font-bold mb-2 ${isDarkMode ? "text-white" : "text-white"}`}>60 Days</div>
-                <div className={`${isDarkMode ? "text-gray-400" : "text-gray-400"}`}>to Profit</div>
+                <div className={`text-4xl font-bold mb-2 ${isDarkMode ? "text-white" : "text-white"}`}>3x</div>
+                <div className={`${isDarkMode ? "text-gray-400" : "text-gray-400"}`}>Average Sales Growth After Launch</div>
               </div>
               <div className="text-center">
                 <div className={`text-4xl font-bold mb-2 ${isDarkMode ? "text-white" : "text-white"}`}>30+</div>
