@@ -21,16 +21,16 @@ export default function WhyZStudiosSection({ isDarkMode }: WhyZStudiosSectionPro
             </h2>
             <div className={`space-y-6 text-lg leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-300"}`}>
               <p>
-                We don't just run ads or create content. We build complete growth ecosystems that work 24/7 to scale
-                your brand.
+                At ZStudios, we're not here to just run ads or edit videos. We're here to build growth systems that move your brand forward every single day.
               </p>
               <p>
-                Our AI-powered automation handles the repetitive tasks while our creative team focuses on what
-                matters: results that compound over time.
+                We blend creativity, strategy, and smart automation to free you from the marketing grind so you can focus on what really matters: growing your business, serving your customers, and doing what you love.
               </p>
               <p>
-                Every strategy is custom-built for your industry, audience, and growth stage. No cookie-cutter
-                solutions. No long-term contracts. Just results.
+                Every brand we work with is different. So is every strategy.
+              </p>
+              <p>
+                No copy-paste templates. No bloated agency nonsense. No long-term contracts. Just clear communication, real partnership, and results that stack month after month.
               </p>
             </div>
           </div>
@@ -38,16 +38,16 @@ export default function WhyZStudiosSection({ isDarkMode }: WhyZStudiosSectionPro
           <div className="space-y-8">
             <div className="grid grid-cols-2 gap-8">
               <div className="text-center">
-                <div className={`text-4xl font-bold mb-2 ${isDarkMode ? "text-white" : "text-white"}`}>300%</div>
-                <div className={`${isDarkMode ? "text-gray-400" : "text-gray-400"}`}>Average ROAS</div>
+                <div className={`text-4xl font-bold mb-2 ${isDarkMode ? "text-white" : "text-white"}`}>260%</div>
+                <div className={`${isDarkMode ? "text-gray-400" : "text-gray-400"}`}>ROAS</div>
               </div>
               <div className="text-center">
-                <div className={`text-4xl font-bold mb-2 ${isDarkMode ? "text-white" : "text-white"}`}>90 Days</div>
-                <div className={`${isDarkMode ? "text-gray-400" : "text-gray-400"}`}>To Profitability</div>
+                <div className={`text-4xl font-bold mb-2 ${isDarkMode ? "text-white" : "text-white"}`}>60 Days</div>
+                <div className={`${isDarkMode ? "text-gray-400" : "text-gray-400"}`}>to Profit</div>
               </div>
               <div className="text-center">
-                <div className={`text-4xl font-bold mb-2 ${isDarkMode ? "text-white" : "text-white"}`}>50+</div>
-                <div className={`${isDarkMode ? "text-gray-400" : "text-gray-400"}`}>Brands Scaled</div>
+                <div className={`text-4xl font-bold mb-2 ${isDarkMode ? "text-white" : "text-white"}`}>30+</div>
+                <div className={`${isDarkMode ? "text-gray-400" : "text-gray-400"}`}>Brands Helped</div>
               </div>
               <div className="text-center">
                 <div className={`text-4xl font-bold mb-2 ${isDarkMode ? "text-white" : "text-white"}`}>24/7</div>
