@@ -1,8 +1,6 @@
 "use client"
 
-import { ChevronDown, ChevronUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { useState } from "react"
 
 interface Service {
   title: string
@@ -21,11 +19,6 @@ interface PackagesSectionProps {
 }
 
 export default function PackagesSection({ isDarkMode }: PackagesSectionProps) {
-  const [openPackage, setOpenPackage] = useState<string | null>(null)
-
-  const togglePackage = (packageName: string) => {
-    setOpenPackage(prev => prev === packageName ? null : packageName)
-  }
 
   const packages: Package[] = [
     {
@@ -99,64 +92,32 @@ export default function PackagesSection({ isDarkMode }: PackagesSectionProps) {
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className={`group p-8 rounded-2xl transition-all duration-500 ${pkg.featured
-                ? isDarkMode
-                  ? "bg-white text-black shadow-2xl scale-105 hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] hover:border-2 hover:border-white"
-                  : "bg-black text-white shadow-2xl scale-105 hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] hover:border-2 hover:border-white"
-                : isDarkMode
-                  ? "bg-gray-900 border border-gray-700 text-white hover:shadow-[0_0_25px_rgba(255,255,255,0.3)] hover:border-2 hover:border-white"
-                  : "bg-white border border-gray-200 hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] hover:border-2 hover:border-white hover:bg-black hover:text-white"
+              className={`group p-8 rounded-2xl transition-all duration-500 h-full backdrop-blur-sm bg-opacity-20 ${isDarkMode
+                ? "bg-white/10 text-white border border-white/30 shadow-[0_8px_32px_0_rgba(255,255,255,0.1)] hover:shadow-[0_8px_32px_0_rgba(255,255,255,0.2)]"
+                : "bg-black/10 text-black border border-black/30 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.2)]"
               }`}
             >
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>
-                {pkg.subtitle && (
-                  <p className={`text-lg mb-4 ${pkg.featured
-                    ? isDarkMode ? "text-gray-600" : "text-gray-300"
-                    : isDarkMode ? "text-gray-400" : "text-gray-600"
-                  }`}>
-                    {pkg.subtitle}
-                  </p>
-                )}
-              </div>
+              <div className="h-full flex flex-col">
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>
+                  {pkg.subtitle && (
+                    <p className={`text-lg mb-4 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
+                      {pkg.subtitle}
+                    </p>
+                  )}
+                </div>
 
-              <Button
-                onClick={() => togglePackage(pkg.name)}
-                className={`w-full flex items-center justify-between ${pkg.featured
-                  ? isDarkMode
-                    ? "bg-black text-white hover:bg-gray-800"
-                    : "bg-white text-black hover:bg-gray-100"
-                  : isDarkMode
-                    ? "bg-white text-black hover:bg-gray-200"
-                    : "bg-black text-white hover:bg-gray-800"
-                }`}
-              >
-                View Services
-                {openPackage === pkg.name ? (
-                  <ChevronUp className="ml-2" size={16} />
-                ) : (
-                  <ChevronDown className="ml-2" size={16} />
-                )}
-              </Button>
-
-              {openPackage === pkg.name && (
-                <div className="mt-6 space-y-6">
+                <div className="flex-grow">
                   {pkg.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="space-y-4">
-                      <h4 className={`text-lg font-semibold ${pkg.featured
-                        ? isDarkMode ? "text-gray-800" : "text-gray-200"
-                        : isDarkMode ? "text-gray-200" : "text-gray-800"
-                      }`}>
+                    <div key={serviceIndex} className="space-y-4 mb-6">
+                      <h4 className={`text-lg font-semibold ${isDarkMode ? "text-gray-200" : "text-gray-800"}`}>
                         {service.title}
                       </h4>
                       <ul className="space-y-2">
                         {service.items.map((item, itemIndex) => (
                           <li
                             key={itemIndex}
-                            className={`flex items-start ${pkg.featured
-                              ? isDarkMode ? "text-gray-600" : "text-gray-300"
-                              : isDarkMode ? "text-gray-400" : "text-gray-600"
-                            }`}
+                            className={`flex items-start ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
                           >
                             <span className="mr-2">✓</span>
                             <span>{item}</span>
@@ -166,7 +127,7 @@ export default function PackagesSection({ isDarkMode }: PackagesSectionProps) {
                     </div>
                   ))}
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>
