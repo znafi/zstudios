@@ -17,32 +17,32 @@ export default function ServicesSection({ isDarkMode }: ServicesSectionProps) {
   const services: Service[] = [
     {
       title: "Short-form Video Content",
-      video: "/videos/video-content.mp4",
+      video: "/videos/Short form Video Content.mp4",
       icon: Play,
     },
     {
       title: "Paid Social Ads",
-      video: "/videos/paid-ads.mp4",
+      video: "/videos/Paid Social Ads.mp4",
       icon: Target,
     },
     {
       title: "Website & Funnel Design",
-      video: "/videos/web-design.mp4",
+      video: "/videos/Website and Funnel Design.mp4",
       icon: Globe,
     },
     {
       title: "SEO & Organic Growth",
-      video: "/videos/seo.mp4",
+      video: "/videos/SEO and Organic Growth.mp4",
       icon: TrendingUp,
     },
     {
       title: "AI Automation",
-      video: "/videos/automation.mp4",
+      video: "/videos/AI automation.mp4",
       icon: Zap,
     },
     {
       title: "Social Media Management",
-      video: "/videos/social-media.mp4",
+      video: "/videos/Social Media Management.mp4",
       icon: Share2,
     },
   ]
