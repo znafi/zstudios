@@ -28,26 +28,14 @@ export default function CTASection({ isDarkMode }: CTASectionProps) {
         <p className={`text-xl max-w-3xl mx-auto mb-10 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
           Book a free strategy call and let&apos;s discuss how we can help you achieve unstoppable growth
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex justify-center">
           <Button
             size="lg"
             variant={isDarkMode ? "outline" : "default"}
-            className={isDarkMode ? "text-white hover:text-white hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]" : "hover:text-white hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]"}
+            className={`text-lg px-8 py-4 ${isDarkMode ? "text-white hover:text-white hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]" : "hover:text-white hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]"}`}
             onClick={scrollToCalendar}
           >
             Book a Free Strategy Call
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className={`text-lg px-8 py-4 transition-colors ${
-              isDarkMode
-                ? "border-white text-white hover:bg-white hover:text-black bg-transparent"
-                : "border-black text-black hover:bg-black hover:text-white bg-transparent"
-            }`}
-            onClick={() => window.open("mailto:contact@zstudios.digital", "_blank")}
-          >
-            Get a Custom Quote
           </Button>
         </div>
       </div>

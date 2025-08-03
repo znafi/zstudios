@@ -61,25 +61,14 @@ export default function HeroSection({ isDarkMode, scrollY }: HeroSectionProps) {
             We combine content, paid ads, AI automation, and design to scale your brand faster.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex justify-center items-center">
             <Button
               size="lg"
               variant={isDarkMode ? "outline" : "default"}
-              className={isDarkMode ? "text-white hover:text-white hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]" : "hover:text-white hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]"}
+              className={`text-lg px-8 py-4 ${isDarkMode ? "text-white hover:text-white hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]" : "hover:text-white hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]"}`}
               onClick={scrollToCalendar}
             >
               Book a Free Strategy Call
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className={`text-lg px-8 py-4 transition-colors ${
-                isDarkMode
-                  ? "border-white hover:bg-white hover:text-black bg-transparent"
-                  : "border-black hover:bg-black hover:text-white bg-transparent"
-              }`}
-            >
-              View Our Work
             </Button>
           </div>
         </div>

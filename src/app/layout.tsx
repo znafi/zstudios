@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://zstudios.digital',
-    title: 'ZStudios - Growth Systems for Scaling Brands',
+    title: 'ZStudios',
     description: 'We combine content, paid ads, AI automation, and design to scale your brand faster.',
     images: [{ url: '/android-chrome-512x512.png' }]
   },

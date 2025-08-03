@@ -48,12 +48,12 @@ export default function Footer({ isDarkMode }: FooterProps) {
 
           <div className="flex items-center space-x-4">
             <a
-              href="mailto:hello@zstudios.com"
+              href="mailto:z@zstudios.ca"
               className={`transition-colors ${
                 isDarkMode ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-black"
               }`}
             >
-              hello@zstudios.com
+              z@zstudios.ca
             </a>
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function Footer({ isDarkMode }: FooterProps) {
             isDarkMode ? "border-gray-800 text-gray-500" : "border-gray-100 text-gray-500"
           }`}
         >
-          <p>&copy; 2024 ZStudios. All rights reserved.</p>
+          <p>&copy; 2025 ZStudios. All rights reserved.</p>
         </div>
       </div>
     </footer>
