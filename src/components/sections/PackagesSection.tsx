@@ -92,16 +92,13 @@ export default function PackagesSection({ isDarkMode }: PackagesSectionProps) {
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className={`group p-8 rounded-2xl transition-all duration-500 h-full backdrop-blur-sm bg-opacity-20 ${isDarkMode
-                ? "bg-white/10 text-white border border-white/30 shadow-[0_8px_32px_0_rgba(255,255,255,0.1)] hover:shadow-[0_8px_32px_0_rgba(255,255,255,0.2)]"
-                : "bg-black/10 text-black border border-black/30 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.2)]"
-              }`}
+              className={`group p-8 rounded-2xl transition-all duration-500 h-full backdrop-blur-lg bg-gradient-to-br from-purple-900/30 via-purple-800/20 to-purple-900/30 border border-purple-500/30 shadow-[0_8px_32px_0_rgba(147,51,234,0.1)] hover:shadow-[0_8px_32px_0_rgba(147,51,234,0.3)] ${isDarkMode ? "text-white" : "text-black"}`}
             >
               <div className="h-full flex flex-col">
                 <div className="mb-8">
-                  <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>
+                  <h3 className="text-3xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">{pkg.name}</h3>
                   {pkg.subtitle && (
-                    <p className={`text-lg mb-4 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
+                    <p className="text-xl font-semibold mb-6 text-purple-300">
                       {pkg.subtitle}
                     </p>
                   )}
@@ -110,14 +107,14 @@ export default function PackagesSection({ isDarkMode }: PackagesSectionProps) {
                 <div className="flex-grow">
                   {pkg.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="space-y-4 mb-6">
-                      <h4 className={`text-lg font-semibold ${isDarkMode ? "text-gray-200" : "text-gray-800"}`}>
+                      <h4 className="text-xl font-bold text-purple-200 mb-3">
                         {service.title}
                       </h4>
                       <ul className="space-y-2">
                         {service.items.map((item, itemIndex) => (
                           <li
                             key={itemIndex}
-                            className={`flex items-start ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
+                            className="flex items-start text-lg font-medium text-purple-100"
                           >
                             <span className="mr-2">✓</span>
                             <span>{item}</span>
