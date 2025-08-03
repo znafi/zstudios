@@ -80,9 +80,9 @@ export default function PackagesSection({ isDarkMode }: PackagesSectionProps) {
     <section id="packages" className="py-20 px-6 lg:px-8 bg-black">
       <div className="max-w-7xl mx-auto relative">
         {/* Purple glow effects */}
-        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-[#4b2c82]/20 rounded-full filter blur-3xl -translate-y-1/2 -translate-x-1/2" />
-        <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-[#2d1657]/20 rounded-full filter blur-3xl -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-[#371d6d]/20 rounded-full filter blur-3xl -translate-y-1/2 -translate-x-1/2" />
+        <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-[#4b2c82]/10 rounded-full filter blur-[128px] -translate-y-1/2 -translate-x-1/2" />
+        <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-[#ff2eef]/5 rounded-full filter blur-[96px] translate-y-1/2 translate-x-1/2" />
+        <div className="absolute top-1/2 left-1/2 w-[700px] h-[700px] bg-[#371d6d]/10 rounded-full filter blur-[160px] -translate-y-1/2 -translate-x-1/2" />
         <div className="text-center mb-16 relative z-10">
           <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${isDarkMode ? "text-white" : "text-black"}`}>
             Choose Your Growth Path
@@ -96,7 +96,7 @@ export default function PackagesSection({ isDarkMode }: PackagesSectionProps) {
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className="group p-8 rounded-[32px] transition-all duration-500 h-full backdrop-blur-lg bg-gradient-to-br from-[#1a0b2e] via-[#1a0b2e]/95 to-[#271344] border border-purple-500/20 shadow-[0_8px_32px_0_rgba(147,51,234,0.15)] hover:shadow-[0_8px_32px_0_rgba(147,51,234,0.4)] overflow-hidden relative text-white"
+              className="group p-8 rounded-[32px] transition-all duration-500 h-full backdrop-blur-xl bg-gradient-to-br from-[#1a0b2e]/40 via-transparent to-[#271344]/60 border border-white/5 shadow-[0_8px_32px_0_rgba(31,0,61,0.25)] hover:shadow-[0_8px_32px_0_rgba(31,0,61,0.35)] overflow-hidden relative text-white"
             >
               <div className="h-full flex flex-col">
                 <div className="mb-8">
