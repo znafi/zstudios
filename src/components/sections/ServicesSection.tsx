@@ -5,7 +5,7 @@ import { Play, Target, Globe, TrendingUp, Zap, Share2 } from "lucide-react"
 interface Service {
   icon: any
   title: string
-  description: string
+  description?: string
   video: string
 }
 
@@ -16,40 +16,34 @@ interface ServicesSectionProps {
 export default function ServicesSection({ isDarkMode }: ServicesSectionProps) {
   const services: Service[] = [
     {
-      icon: Play,
       title: "Short-form Video Content",
-      description: "Viral-ready content that converts viewers into customers",
-      video: "/videos/Short form Video Content.mp4",
+      video: "/videos/video-content.mp4",
+      icon: Play,
     },
     {
-      icon: Target,
       title: "Paid Social Ads",
-      description: "Meta, Google, and TikTok campaigns that scale profitably",
-      video: "/videos/Paid Social Ads.mp4",
+      video: "/videos/paid-ads.mp4",
+      icon: Target,
     },
     {
-      icon: Globe,
       title: "Website & Funnel Design",
-      description: "High-converting designs that turn visitors into buyers",
-      video: "/videos/Website and Funnel Design.mp4",
+      video: "/videos/web-design.mp4",
+      icon: Globe,
     },
     {
-      icon: TrendingUp,
       title: "SEO & Organic Growth",
-      description: "Sustainable traffic growth through strategic optimization",
-      video: "/videos/SEO and Organic Growth.mp4",
+      video: "/videos/seo.mp4",
+      icon: TrendingUp,
     },
     {
-      icon: Zap,
       title: "AI Automation",
-      description: "n8n workflows that streamline your operations",
-      video: "/videos/AI automation.mp4",
+      video: "/videos/automation.mp4",
+      icon: Zap,
     },
     {
-      icon: Share2,
       title: "Social Media Management",
-      description: "Consistent brand presence across all platforms",
-      video: "/videos/Social Media Management.mp4",
+      video: "/videos/social-media.mp4",
+      icon: Share2,
     },
   ]
 
