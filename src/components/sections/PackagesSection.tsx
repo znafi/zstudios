@@ -1,8 +1,7 @@
 "use client"
 
-import { ArrowRight, ChevronDown, ChevronUp } from "lucide-react"
+import { ChevronDown, ChevronUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import * as Collapsible from "@radix-ui/react-collapsible"
 import { useState } from "react"
 
 interface Service {
@@ -12,7 +11,7 @@ interface Service {
 
 interface Package {
   name: string
-  subtitle: string
+  subtitle?: string
   services: Service[]
   featured?: boolean
 }
@@ -22,13 +21,10 @@ interface PackagesSectionProps {
 }
 
 export default function PackagesSection({ isDarkMode }: PackagesSectionProps) {
-  const [openPackages, setOpenPackages] = useState<{ [key: string]: boolean }>({})
+  const [openPackage, setOpenPackage] = useState<string | null>(null)
 
   const togglePackage = (packageName: string) => {
-    setOpenPackages(prev => ({
-      ...prev,
-      [packageName]: !prev[packageName]
-    }))
+    setOpenPackage(prev => prev === packageName ? null : packageName)
   }
 
   const packages: Package[] = [
@@ -101,10 +97,8 @@ export default function PackagesSection({ isDarkMode }: PackagesSectionProps) {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {packages.map((pkg, index) => (
-            <Collapsible.Root
+            <div
               key={index}
-              open={openPackages[pkg.name]}
-              onOpenChange={() => togglePackage(pkg.name)}
               className={`group p-8 rounded-2xl transition-all duration-500 ${pkg.featured
                 ? isDarkMode
                   ? "bg-white text-black shadow-2xl scale-105 hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] hover:border-2 hover:border-white"
@@ -126,27 +120,26 @@ export default function PackagesSection({ isDarkMode }: PackagesSectionProps) {
                 )}
               </div>
 
-              <Collapsible.Trigger asChild>
-                <Button
-                  className={`w-full flex items-center justify-between ${pkg.featured
-                    ? isDarkMode
-                      ? "bg-black text-white hover:bg-gray-800"
-                      : "bg-white text-black hover:bg-gray-100"
-                    : isDarkMode
-                      ? "bg-white text-black hover:bg-gray-200"
-                      : "bg-black text-white hover:bg-gray-800"
-                  }`}
-                >
-                  View Services
-                  {openPackages[pkg.name] ? (
-                    <ChevronUp className="ml-2" size={16} />
-                  ) : (
-                    <ChevronDown className="ml-2" size={16} />
-                  )}
-                </Button>
-              </Collapsible.Trigger>
+              <Button
+                onClick={() => togglePackage(pkg.name)}
+                className={`w-full flex items-center justify-between ${pkg.featured
+                  ? isDarkMode
+                    ? "bg-black text-white hover:bg-gray-800"
+                    : "bg-white text-black hover:bg-gray-100"
+                  : isDarkMode
+                    ? "bg-white text-black hover:bg-gray-200"
+                    : "bg-black text-white hover:bg-gray-800"
+                }`}
+              >
+                View Services
+                {openPackage === pkg.name ? (
+                  <ChevronUp className="ml-2" size={16} />
+                ) : (
+                  <ChevronDown className="ml-2" size={16} />
+                )}
+              </Button>
 
-              <Collapsible.Content>
+              {openPackage === pkg.name && (
                 <div className="mt-6 space-y-6">
                   {pkg.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="space-y-4">
@@ -173,8 +166,8 @@ export default function PackagesSection({ isDarkMode }: PackagesSectionProps) {
                     </div>
                   ))}
                 </div>
-              </Collapsible.Content>
-            </Collapsible.Root>
+              )}
+            </div>
           ))}
         </div>
       </div>
