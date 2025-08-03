@@ -45,18 +45,7 @@ export default function HeroSection({ isDarkMode, scrollY }: HeroSectionProps) {
                   WebkitBackgroundClip: "text",
                 }}
               >
-                We Bring
-              </span>
-            </div>
-            <br />
-            <div className="inline-block">
-              <span
-                className={isDarkMode ? "text-gray-400" : "text-gray-600"}
-                style={{
-                  textShadow: isDarkMode ? "0 0 20px rgba(156, 163, 175, 0.4)" : "none",
-                }}
-              >
-                the System
+                We Bring the System
               </span>
             </div>
           </h1>
