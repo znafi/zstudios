@@ -27,14 +27,32 @@ export default function HeroSection({ isDarkMode, scrollY }: HeroSectionProps) {
           }}
         >
           <h1
-            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-6 ${isDarkMode ? "text-white" : "text-black"}`}
+            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none mb-8"
             style={{
-              textShadow: isDarkMode ? "0 0 15px rgba(255, 255, 255, 0.2)" : "none",
+              textShadow: isDarkMode
+                ? "0 0 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.1)"
+                : "none",
             }}
           >
-            You Bring the Vision.
+            You Bring the Vision
             <br />
-            We Bring the System
+            <span
+              className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
+              style={{
+                WebkitBackgroundClip: "text",
+              }}
+            >
+              We Bring
+            </span>
+            <br />
+            <span
+              className={isDarkMode ? "text-gray-400" : "text-gray-600"}
+              style={{
+                textShadow: isDarkMode ? "0 0 20px rgba(156, 163, 175, 0.4)" : "none",
+              }}
+            >
+              the System
+            </span>
           </h1>
 
           <p
