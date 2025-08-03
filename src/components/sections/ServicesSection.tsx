@@ -96,10 +96,10 @@ export default function ServicesSection({ isDarkMode }: ServicesSectionProps) {
               <div className="absolute inset-0 bg-black/60 rounded-2xl" />
 
               {/* Default Content */}
-              <div className="relative z-10">
-                <div className="mb-6">
+              <div className="relative z-10 flex flex-col items-center justify-center h-full pt-4">
+                <div className="mb-4 flex justify-center">
                   <service.icon
-                    size={48}
+                    size={32}
                     className="text-white drop-shadow-lg"
                     style={{
                       filter: "drop-shadow(0 0 10px rgba(255, 255, 255, 0.5))",
@@ -107,7 +107,7 @@ export default function ServicesSection({ isDarkMode }: ServicesSectionProps) {
                   />
                 </div>
                 <h3
-                  className="text-xl font-bold mb-3 text-center text-white"
+                  className="text-xl font-bold text-center text-white"
                   style={{
                     textShadow: "0 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 255, 255, 0.3)",
                   }}
