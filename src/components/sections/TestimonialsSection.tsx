@@ -2,6 +2,27 @@
 
 import { Star } from "lucide-react"
 
+const testimonials = [
+  {
+    name: "John Peterson",
+    role: "Company Founder",
+    content: "They crushed our branding overhaul. The whole process was smooth and the new look is perfect.",
+    image: "/images/john-testimonial.jpg"
+  },
+  {
+    name: "Omar Khan",
+    role: "Business Owner",
+    content: "I was so lost with social media, but they've helped me find my audience. It's been a game-changer for my brand.",
+    image: "/images/omar-testimonial.jpg"
+  },
+  {
+    name: "Emily Roberts",
+    role: "Brand Owner",
+    content: "Totally transformed my website! So happy with the results and the team was a pleasure to work with.",
+    image: "/images/emily-testimonial.jpg"
+  }
+]
+
 interface TestimonialsSectionProps {
   isDarkMode: boolean
 }
@@ -22,26 +43,30 @@ export default function TestimonialsSection({ isDarkMode }: TestimonialsSectionP
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[1, 2, 3].map((i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+          {testimonials.map((testimonial, index) => (
             <div
-              key={i}
-              className={`p-8 rounded-2xl shadow-lg transition-colors duration-300 ${
-                isDarkMode ? "bg-gray-900" : "bg-white"
-              }`}
+              key={index}
+              className={`p-8 rounded-[32px] bg-gradient-to-br from-[#1a0b2e]/40 via-transparent to-[#271344]/60 backdrop-blur-xl border border-white/5 shadow-[0_8px_32px_0_rgba(31,0,61,0.25)] hover:shadow-[0_8px_32px_0_rgba(31,0,61,0.35)] transition-all duration-300 ${isDarkMode ? "bg-gray-900" : "bg-white"}`}
             >
               <div className="flex mb-4">
                 {[...Array(5)].map((_, j) => (
-                  <Star key={j} size={20} className={`fill-current ${isDarkMode ? "text-white" : "text-black"}`} />
+                  <Star key={j} size={20} className="text-yellow-400" />
                 ))}
               </div>
-              <p className={`mb-6 leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                {testimonial.content}
+              <p className={`mb-8 leading-relaxed text-lg ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
+                "{testimonial.content}"
               </p>
               <div className="flex items-center">
-                <img src={testimonial.image} alt={testimonial.name} className="w-12 h-12 rounded-full mr-4" />
+                <div className="w-16 h-16 rounded-full mr-4 overflow-hidden ring-2 ring-purple-500/20">
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.name} 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div>
-                  <div className={`font-semibold ${isDarkMode ? "text-white" : "text-black"}`}>{testimonial.name}</div>
+                  <div className={`font-semibold text-lg ${isDarkMode ? "text-white" : "text-black"}`}>{testimonial.name}</div>
                   <div className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}>{testimonial.role}</div>
                 </div>
               </div>
