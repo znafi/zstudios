@@ -36,14 +36,13 @@ export default function TestimonialsSection({ isDarkMode }: TestimonialsSectionP
                 ))}
               </div>
               <p className={`mb-6 leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                "ZStudio transformed our entire approach to digital marketing. The results speak for themselves -
-                we've never seen growth like this."
+                {testimonial.content}
               </p>
               <div className="flex items-center">
-                <div className={`w-12 h-12 rounded-full mr-4 ${isDarkMode ? "bg-gray-700" : "bg-gray-200"}`}></div>
+                <img src={testimonial.image} alt={testimonial.name} className="w-12 h-12 rounded-full mr-4" />
                 <div>
-                  <div className={`font-semibold ${isDarkMode ? "text-white" : "text-black"}`}>Client Name</div>
-                  <div className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}>CEO, Brand Name</div>
+                  <div className={`font-semibold ${isDarkMode ? "text-white" : "text-black"}`}>{testimonial.name}</div>
+                  <div className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}>{testimonial.role}</div>
                 </div>
               </div>
             </div>
