@@ -7,19 +7,22 @@ const testimonials = [
     name: "John Peterson",
     role: "Company Founder",
     content: "They crushed our branding overhaul. The whole process was smooth and the new look is perfect.",
-    image: "/images/john-testimonial.jpg"
+    image: "/testimonial1.jpg",
+    stars: 5
   },
   {
     name: "Omar Khan",
     role: "Business Owner",
     content: "I was so lost with social media, but they've helped me find my audience. It's been a game-changer for my brand.",
-    image: "/images/omar-testimonial.jpg"
+    image: "/testimonial2.jpg",
+    stars: 4.5
   },
   {
     name: "Emily Roberts",
     role: "Brand Owner",
     content: "Totally transformed my website! So happy with the results and the team was a pleasure to work with.",
-    image: "/images/emily-testimonial.jpg"
+    image: "/testimonial3.jpg",
+    stars: 4.5
   }
 ]
 
@@ -51,7 +54,11 @@ export default function TestimonialsSection({ isDarkMode }: TestimonialsSectionP
             >
               <div className="flex mb-4">
                 {[...Array(5)].map((_, j) => (
-                  <Star key={j} size={20} className="text-yellow-400" />
+                  <Star 
+                    key={j} 
+                    size={20} 
+                    className={`${j < Math.floor(testimonial.stars) ? 'text-yellow-400 fill-yellow-400' : j < testimonial.stars ? 'text-yellow-400 fill-yellow-400 opacity-50' : 'text-gray-300'}`}
+                  />
                 ))}
               </div>
               <p className={`mb-8 leading-relaxed text-lg ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
