@@ -7,21 +7,21 @@ const testimonials = [
     name: "John Peterson",
     role: "Company Founder",
     content: "They crushed our branding overhaul. The whole process was smooth and the new look is perfect.",
-    image: "/testimonial1.jpg",
+    image: "/images/john.jpg",
     stars: 5
   },
   {
     name: "Omar Khan",
     role: "Business Owner",
     content: "I was so lost with social media, but they've helped me find my audience. It's been a game-changer for my brand.",
-    image: "/testimonial2.jpg",
+    image: "/images/omar.jpg",
     stars: 4.5
   },
   {
     name: "Emily Roberts",
     role: "Brand Owner",
     content: "Totally transformed my website! So happy with the results and the team was a pleasure to work with.",
-    image: "/testimonial3.jpg",
+    image: "/images/emily.jpg",
     stars: 4.5
   }
 ]
