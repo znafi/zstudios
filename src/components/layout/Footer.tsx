@@ -33,7 +33,6 @@ export default function Footer({ isDarkMode }: FooterProps) {
             </span>
           </div>
         </div>
-        </div>
       </div>
     </footer>
   )
