@@ -51,9 +51,11 @@ export default function HeroSection({ isDarkMode, scrollY }: HeroSectionProps) {
           </h1>
 
           <p
-            className={`text-xl md:text-2xl max-w-4xl mx-auto mb-12 leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
+            className={`text-xl md:text-2xl max-w-4xl mx-auto mb-12 leading-relaxed font-bold ${isDarkMode ? "text-gray-100" : "text-gray-700"}`}
             style={{
-              textShadow: isDarkMode ? "0 0 15px rgba(209, 213, 219, 0.2)" : "none",
+              textShadow: isDarkMode 
+                ? "0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 255, 255, 0.1)" 
+                : "0 0 10px rgba(0, 0, 0, 0.1)",
             }}
           >
             Your A–Z. Engineered by Z.
