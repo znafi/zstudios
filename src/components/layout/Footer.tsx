@@ -19,33 +19,6 @@ export default function Footer({ isDarkMode }: FooterProps) {
             ZStudios
           </div>
 
-          <div className="flex items-center space-x-8 mb-4 md:mb-0">
-            <a
-              href="#"
-              className={`transition-colors ${
-                isDarkMode ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-black"
-              }`}
-            >
-              Services
-            </a>
-            <a
-              href="#"
-              className={`transition-colors ${
-                isDarkMode ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-black"
-              }`}
-            >
-              About
-            </a>
-            <a
-              href="#"
-              className={`transition-colors ${
-                isDarkMode ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-black"
-              }`}
-            >
-              Contact
-            </a>
-          </div>
-
           <div className="flex items-center space-x-4">
             <a
               href="mailto:z@zstudios.ca"
@@ -55,15 +28,11 @@ export default function Footer({ isDarkMode }: FooterProps) {
             >
               z@zstudios.ca
             </a>
+            <span className={isDarkMode ? "text-gray-500" : "text-gray-500"}>
+              &copy; 2025 ZStudios. All rights reserved.
+            </span>
           </div>
         </div>
-
-        <div
-          className={`mt-8 pt-8 border-t text-center ${
-            isDarkMode ? "border-gray-800 text-gray-500" : "border-gray-100 text-gray-500"
-          }`}
-        >
-          <p>&copy; 2025 ZStudios. All rights reserved.</p>
         </div>
       </div>
     </footer>
