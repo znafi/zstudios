@@ -56,7 +56,7 @@ export default function HeroSection({ isDarkMode, scrollY }: HeroSectionProps) {
               textShadow: isDarkMode ? "0 0 15px rgba(209, 213, 219, 0.2)" : "none",
             }}
           >
-            Less Buzzwords. More Bottom Line
+            Your A–Z. Engineered by Z.
           </p>
 
           <div className="flex justify-center items-center">
