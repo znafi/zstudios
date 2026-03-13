@@ -1,41 +1,46 @@
 "use client"
 
 import { Star, CheckCircle2 } from "lucide-react"
+import { useState } from "react"
 
 const testimonials = [
   {
-    name: "Jennifer Nguyen",
-    timeAgo: "1 month ago",
-    content: "Amazing team! Thorough, thoughtful, and easy to work with. I wish I found them much sooner!",
-    avatar: "J",
+    name: "Sarah Mitchell",
+    timeAgo: "2 weeks ago",
+    content: "Working with ZStudios transformed our entire digital presence. Their team understood our vision perfectly and delivered beyond expectations. The attention to detail and creative approach made all the difference for our brand.",
+    fullContent: "Working with ZStudios transformed our entire digital presence. Their team understood our vision perfectly and delivered beyond expectations. The attention to detail and creative approach made all the difference for our brand. From the initial consultation to the final delivery, every step was professional and seamless. I highly recommend them to anyone looking to elevate their business!",
+    avatar: "S",
     avatarColor: "bg-pink-500",
     stars: 5,
     verified: true
   },
   {
-    name: "New Season",
+    name: "Marcus Chen",
     timeAgo: "1 month ago",
-    content: "My initial consultation with Adster's Sales Manager, Micheal was very informative, professional and...",
-    avatar: "N",
+    content: "Exceptional service from start to finish. The ZStudios team took time to understand our business goals and created a strategy that actually works. Our engagement has increased by 300% since partnering with them.",
+    fullContent: "Exceptional service from start to finish. The ZStudios team took time to understand our business goals and created a strategy that actually works. Our engagement has increased by 300% since partnering with them. They're responsive, creative, and truly invested in our success. Best decision we made for our marketing!",
+    avatar: "M",
     avatarColor: "bg-blue-600",
     stars: 5,
     verified: true
   },
   {
-    name: "Kyle Huberman",
+    name: "Elena Rodriguez",
     timeAgo: "2 months ago",
-    content: "We've worked with Adster on multiple projects and have consistently been impressed with their approach. Their...",
-    avatar: "/images/kyle.jpg",
+    content: "I've worked with several agencies before, but ZStudios stands out. Their innovative approach to social media marketing helped us reach audiences we never thought possible. Professional, creative, and results-driven.",
+    fullContent: "I've worked with several agencies before, but ZStudios stands out. Their innovative approach to social media marketing helped us reach audiences we never thought possible. Professional, creative, and results-driven. The team is always available to answer questions and provide insights. They truly care about their clients' success and it shows in the quality of their work.",
+    avatar: "/images/elena.jpg",
     avatarColor: "",
     stars: 5,
     verified: true,
     hasImage: true
   },
   {
-    name: "Soraya Monot",
-    timeAgo: "6 months ago",
-    content: "Really Amazing, They took the time to call and describe their services and really get in depth of what they do an...",
-    avatar: "S",
+    name: "David Thompson",
+    timeAgo: "3 months ago",
+    content: "Outstanding results! ZStudios helped us rebrand and launch our new website. The process was smooth, collaborative, and the final product exceeded all our expectations. Our conversion rate has doubled since the launch.",
+    fullContent: "Outstanding results! ZStudios helped us rebrand and launch our new website. The process was smooth, collaborative, and the final product exceeded all our expectations. Our conversion rate has doubled since the launch. They brought fresh ideas to the table and executed them flawlessly. If you're looking for a team that delivers real results, look no further!",
+    avatar: "D",
     avatarColor: "bg-teal-600",
     stars: 5,
     verified: true
@@ -56,6 +61,15 @@ const GoogleIcon = () => (
 )
 
 export default function TestimonialsSection({ isDarkMode }: TestimonialsSectionProps) {
+  const [expandedReviews, setExpandedReviews] = useState<{[key: number]: boolean}>({})
+
+  const toggleReadMore = (index: number) => {
+    setExpandedReviews(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }))
+  }
+
   return (
     <section
       id="results"
@@ -63,7 +77,7 @@ export default function TestimonialsSection({ isDarkMode }: TestimonialsSectionP
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-[#00D4FF]">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white">
             Digital Marketing Success Stories: Businesses We've Helped Grow!
           </h2>
           
@@ -132,20 +146,17 @@ export default function TestimonialsSection({ isDarkMode }: TestimonialsSectionP
               </div>
 
               <p className="text-gray-300 text-sm leading-relaxed">
-                {testimonial.content}
+                {expandedReviews[index] ? testimonial.fullContent : testimonial.content}
               </p>
 
-              <button className="text-blue-400 text-sm mt-3 hover:underline">
-                Read more
+              <button 
+                onClick={() => toggleReadMore(index)}
+                className="text-blue-400 text-sm mt-3 hover:underline"
+              >
+                {expandedReviews[index] ? 'Show less' : 'Read more'}
               </button>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <button className="px-8 py-3 border-2 border-[#00D4FF] text-[#00D4FF] rounded-full font-semibold hover:bg-[#00D4FF] hover:text-black transition-all duration-300">
-            ADSTER CREATIVE REVIEWS & AWARDS
-          </button>
         </div>
       </div>
     </section>
