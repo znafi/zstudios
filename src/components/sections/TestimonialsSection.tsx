@@ -5,7 +5,7 @@ import { useState } from "react"
 
 const testimonials = [
   {
-    name: "Lakhmali Motha",
+    name: "Lakhmali",
     timeAgo: "2 weeks ago",
     content: "Super happy with the results! They really understood what we needed and delivered. Would definitely recommend.",
     fullContent: "Super happy with the results! They really understood what we needed and delivered. The whole process was smooth and the team was easy to work with. Would definitely recommend to anyone looking for quality digital marketing.",
@@ -28,7 +28,7 @@ const testimonials = [
     name: "Elena Rodriguez",
     timeAgo: "2 months ago",
     content: "Best agency I've worked with. They know their stuff and it shows in the results. My brand looks so much better now.",
-    fullContent: "Best agency I've worked with. They know their stuff and it shows in the results. My brand looks so much better now and I'm getting way more inquiries. Worth every penny.",
+    fullContent: "Best agency I've worked with. They know their stuff and it shows in the results. My brand looks so much better now and I'm getting way more inquiries.",
     avatar: "/images/elena.jpg",
     avatarColor: "",
     stars: 5,
@@ -38,7 +38,7 @@ const testimonials = [
   {
     name: "Mohammed Israr",
     timeAgo: "3 months ago",
-    content: "They helped us launch our new site and it turned out amazing. Sales have literally doubled since we went live.",
+    content: "They helped us launch our new site and it turned out amazing.",
     fullContent: "They helped us launch our new site and it turned out amazing. Sales have literally doubled since we went live. The team was professional and made the whole thing stress-free. Highly recommend!",
     avatar: "M",
     avatarColor: "bg-teal-600",
