@@ -5,21 +5,21 @@ import { useState } from "react"
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
+    name: "Lakhmali Motha",
     timeAgo: "2 weeks ago",
-    content: "Working with ZStudios transformed our entire digital presence. Their team understood our vision perfectly and delivered beyond expectations. The attention to detail and creative approach made all the difference for our brand.",
-    fullContent: "Working with ZStudios transformed our entire digital presence. Their team understood our vision perfectly and delivered beyond expectations. The attention to detail and creative approach made all the difference for our brand. From the initial consultation to the final delivery, every step was professional and seamless. I highly recommend them to anyone looking to elevate their business!",
-    avatar: "S",
+    content: "Super happy with the results! They really understood what we needed and delivered. Would definitely recommend.",
+    fullContent: "Super happy with the results! They really understood what we needed and delivered. The whole process was smooth and the team was easy to work with. Would definitely recommend to anyone looking for quality digital marketing.",
+    avatar: "L",
     avatarColor: "bg-pink-500",
     stars: 5,
     verified: true
   },
   {
-    name: "Marcus Chen",
+    name: "Ling Chen",
     timeAgo: "1 month ago",
-    content: "Exceptional service from start to finish. The ZStudios team took time to understand our business goals and created a strategy that actually works. Our engagement has increased by 300% since partnering with them.",
-    fullContent: "Exceptional service from start to finish. The ZStudios team took time to understand our business goals and created a strategy that actually works. Our engagement has increased by 300% since partnering with them. They're responsive, creative, and truly invested in our success. Best decision we made for our marketing!",
-    avatar: "M",
+    content: "Great experience working with ZStudios. Our social media engagement went up significantly after just 2 months.",
+    fullContent: "Great experience working with ZStudios. Our social media engagement went up significantly after just 2 months. They actually listen to what you want and deliver on it. Very responsive team.",
+    avatar: "L",
     avatarColor: "bg-blue-600",
     stars: 5,
     verified: true
@@ -27,8 +27,8 @@ const testimonials = [
   {
     name: "Elena Rodriguez",
     timeAgo: "2 months ago",
-    content: "I've worked with several agencies before, but ZStudios stands out. Their innovative approach to social media marketing helped us reach audiences we never thought possible. Professional, creative, and results-driven.",
-    fullContent: "I've worked with several agencies before, but ZStudios stands out. Their innovative approach to social media marketing helped us reach audiences we never thought possible. Professional, creative, and results-driven. The team is always available to answer questions and provide insights. They truly care about their clients' success and it shows in the quality of their work.",
+    content: "Best agency I've worked with. They know their stuff and it shows in the results. My brand looks so much better now.",
+    fullContent: "Best agency I've worked with. They know their stuff and it shows in the results. My brand looks so much better now and I'm getting way more inquiries. Worth every penny.",
     avatar: "/images/elena.jpg",
     avatarColor: "",
     stars: 5,
@@ -36,11 +36,11 @@ const testimonials = [
     hasImage: true
   },
   {
-    name: "David Thompson",
+    name: "Mohammed Israr",
     timeAgo: "3 months ago",
-    content: "Outstanding results! ZStudios helped us rebrand and launch our new website. The process was smooth, collaborative, and the final product exceeded all our expectations. Our conversion rate has doubled since the launch.",
-    fullContent: "Outstanding results! ZStudios helped us rebrand and launch our new website. The process was smooth, collaborative, and the final product exceeded all our expectations. Our conversion rate has doubled since the launch. They brought fresh ideas to the table and executed them flawlessly. If you're looking for a team that delivers real results, look no further!",
-    avatar: "D",
+    content: "They helped us launch our new site and it turned out amazing. Sales have literally doubled since we went live.",
+    fullContent: "They helped us launch our new site and it turned out amazing. Sales have literally doubled since we went live. The team was professional and made the whole thing stress-free. Highly recommend!",
+    avatar: "M",
     avatarColor: "bg-teal-600",
     stars: 5,
     verified: true
